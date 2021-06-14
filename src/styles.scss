@@ -1,0 +1,28 @@
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+
+// Default variable overrides
+//$body-bg: #000;
+//$body-color: #fff;
+$font-family-sans-serif: Roboto, "Helvetica Neue", sans-serif;
+$font-weight-base: 300;
+
+
+// Required
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Bootstrap and its default variables
+
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+
+//@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/spinners";
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/transitions";
