@@ -1,0 +1,59 @@
+.main-weather {
+  height: 650px;
+  color: #fff;
+
+  .weather-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+    border-radius: 0.25rem;
+    opacity: 0.8;
+  }
+
+  .weather-side {
+    position: relative;
+    height: 100%;
+    border-radius: 0.25rem;
+    width: 100%;
+  }
+
+  .date-container {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+  }
+
+  .date-day {
+    display: block;
+  }
+
+  .location {
+    display: inline-block;
+  }
+
+  .location-icon {
+    display: inline-block;
+    height: 0.8em;
+    width: auto;
+    margin-right: 5px;
+  }
+
+  .weather-container {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+  }
+
+  .weather-icon.feather {
+    height: 60px;
+    width: auto;
+  }
+
+  .weather-temp {
+    font-weight: 700;
+    font-size: 4em;
+  }
+}

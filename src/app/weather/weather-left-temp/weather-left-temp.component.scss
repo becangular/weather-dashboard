@@ -1,0 +1,23 @@
+.card {
+  border: none !important;
+  .color-temp-max {
+    background-color: rgb(221, 49, 49) !important;
+    h5 {
+      color: #fff;
+    }
+  }
+
+  .color-temp-min {
+    background-color: rgb(241, 188, 41) !important;
+    h5 {
+      color: #fff;
+    }
+  }
+
+  .color-humidity {
+    background-color: rgb(71, 125, 243) !important;
+    h5 {
+      color: #fff;
+    }
+  }
+}

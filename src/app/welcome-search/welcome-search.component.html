@@ -1,0 +1,25 @@
+<div class="d-flex vh-100 text-center text-white masthead">
+
+  <div class="cover-container d-flex w-100 p-3 mx-auto flex-column justify-content-center">
+
+
+    <main class="px-3">
+      <h1>WELCOME</h1>
+      <p class="lead text-uppercase">What will the weather be like in your city?</p>
+
+      <div class="input-group mb-3">
+
+        <input type="text" class="form-control" placeholder="City name" aria-label="City name" id="city" name="city"
+          [(ngModel)]="city" required>
+        <button [disabled]="!city" class="btn btn-light" type="submit" (click)="getCity(city)">
+          <i class="bi bi-geo-alt-fill"></i>
+        </button>
+
+      </div>
+
+    </main>
+
+
+  </div>
+
+</div>
