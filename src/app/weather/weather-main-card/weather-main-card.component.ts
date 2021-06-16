@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Weather } from 'src/app/_intefaces/weather.interface';
 
 @Component({
   selector: 'gm-weather-main-card',
@@ -7,13 +8,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class WeatherMainCardComponent implements OnInit {
 
-  @Input() city!: string;
+  @Input() weatherResult!: Weather;
+
+  today = new Date();
 
   photo = 'https://images.unsplash.com/photo-1559963110-71b394e7494d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80';
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

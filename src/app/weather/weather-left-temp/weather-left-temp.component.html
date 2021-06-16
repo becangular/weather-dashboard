@@ -7,7 +7,7 @@
       </div>
       <div class="card-body d-flex justify-content-center align-items-center">
         <i class="bi bi-thermometer" style="font-size: 4rem; color: rgb(241, 188, 41)"></i>
-        <h1 class="display-3">50</h1>
+        <h1 class="display-3">{{weatherResult.temp_min | number: '1.0-0'}}°C</h1>
       </div>
     </div>
 
@@ -21,7 +21,7 @@
       </div>
       <div class="card-body d-flex justify-content-center align-items-center">
         <i class="bi bi-thermometer-sun" style="font-size: 4rem; color: rgb(221, 49, 49)"></i>
-        <h1 class="display-3">60</h1>
+        <h1 class="display-3">{{weatherResult.temp_max | number: '1.0-0'}}°C</h1>
       </div>
     </div>
 
@@ -35,7 +35,7 @@
       </div>
       <div class="card-body d-flex justify-content-center align-items-center">
         <i class="bi bi-droplet-half" style="font-size: 4rem; color: rgb(71, 125, 243)"></i>
-        <h1 class="display-3">78</h1>
+        <h1 class="display-3">{{weatherResult.humidity | number: '1.0-0'}}°C</h1>
       </div>
     </div>
 

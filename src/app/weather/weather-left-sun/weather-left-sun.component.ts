@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Weather } from 'src/app/_intefaces/weather.interface';
 
 @Component({
   selector: 'gm-weather-left-sun',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./weather-left-sun.component.scss']
 })
 export class WeatherLeftSunComponent implements OnInit {
+
+  @Input() weatherResult!: Weather;
 
   constructor() { }
 

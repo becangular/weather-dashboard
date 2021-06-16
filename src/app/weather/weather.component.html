@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-center" *ngIf="loading">
+<div class="d-flex vh-100 text-center justify-content-center align-items-center" *ngIf="loading">
   <div class="spinner-border text-light" role="status">
   </div>
 </div>
@@ -6,21 +6,22 @@
 
 
 
-<div class="container mt-5">
+
+<div *ngIf="!loading && weatherResult" [@fadeInOut] class="container mt-5">
   <div class="row">
     <div class="col-sm-4">
 
-      <gm-weather-main-card></gm-weather-main-card>
+      <gm-weather-main-card [weatherResult]="weatherResult"></gm-weather-main-card>
 
     </div>
 
     <div class="col-sm-8">
 
-      <gm-weather-left-box></gm-weather-left-box>
+      <gm-weather-left-box [weatherResult]="weatherResult"></gm-weather-left-box>
 
-      <gm-weather-left-temp></gm-weather-left-temp>
+      <gm-weather-left-temp [weatherResult]="weatherResult"></gm-weather-left-temp>
 
-      <gm-weather-left-sun></gm-weather-left-sun>
+      <gm-weather-left-sun [weatherResult]="weatherResult"></gm-weather-left-sun>
 
     </div>
   </div>

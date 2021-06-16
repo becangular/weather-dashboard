@@ -2,12 +2,14 @@
   <div [ngStyle]="{'background-image': 'url(' + photo + ')'}" class="weather-side">
     <div class="weather-gradient"></div>
     <div class="date-container">
-      <h2 class="m-0">Tuesday</h2><span class="date-day">15 Jan 2019</span><i class="bi bi-geo-alt-fill"></i><span
-        class="location mt-8">Paris, FR</span>
+      <h2 class="m-0">{{today | date:'EEEE'}}</h2><span class="date-day">{{today | date:'medium'}}</span>
+      <i class="bi bi-geo-alt-fill"></i><span class="location mt-8">{{weatherResult.name}} - {{weatherResult.country}}
+      </span>
     </div>
-    <div class="weather-container"><i class="bi bi-brightness-high" style="font-size: 8rem;"></i>
-      <h1 class="weather-temp m-0">29°C</h1>
-      <h3 class="m-0">Sunny</h3>
+    <div class="weather-container">
+      <img src="http://openweathermap.org/img/w/{{weatherResult.icon +'.png'}}" class="img-fluid">
+      <h1 class="weather-temp m-0">{{weatherResult.temp | number: '1.0-0'}}°C</h1>
+      <h3 class="m-0">{{weatherResult.main }}</h3>
     </div>
   </div>
 

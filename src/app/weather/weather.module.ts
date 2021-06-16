@@ -5,6 +5,7 @@ import { WeatherMainCardComponent} from './weather-main-card/weather-main-card.c
 import { WeatherLeftBoxComponent} from './weather-left-box/weather-left-box.component';
 import { WeatherLeftTempComponent} from './weather-left-temp/weather-left-temp.component';
 import { WeatherLeftSunComponent} from './weather-left-sun/weather-left-sun.component';
+import { WeatherServiceService} from '../_services/weather-service.service';
 import { CommonModule } from "@angular/common";
 
 
@@ -23,6 +24,9 @@ import { CommonModule } from "@angular/common";
   ],
   exports:[
     CommonModule
+  ],
+  providers: [
+    WeatherServiceService
   ],
   entryComponents:[]
 })
