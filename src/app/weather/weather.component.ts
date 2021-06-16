@@ -38,20 +38,24 @@ export class WeatherComponent implements OnInit, OnDestroy {
     this.weatherService.getWeather(this.city)
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe(res => {
-        const weather: Weather = {
-          lon: res.coord.lon,
-          lat: res.coord.lat,
-          main: res.weather[0].main,
-          description: res.weather[0].description,
-          icon: res.weather[0].icon,
-          temp: res.main.temp,
-          temp_min: res.main.temp_min,
-          temp_max: res.main.temp_max,
-          humidity: res.main.humidity,
-          country: res.sys.country,
-          name: res.name,
-        };
-        this.weatherResult = weather;
+        if (Object.keys(res).length === 0) {
+          this.weatherResult = res;
+        } else {
+          const weather: Weather = {
+            lon: res.coord.lon,
+            lat: res.coord.lat,
+            main: res.weather[0].main,
+            description: res.weather[0].description,
+            icon: res.weather[0].icon,
+            temp: res.main.temp,
+            temp_min: res.main.temp_min,
+            temp_max: res.main.temp_max,
+            humidity: res.main.humidity,
+            country: res.sys.country,
+            name: res.name,
+          };
+          this.weatherResult = weather;
+        }
         this.loading = false;
       });
 

@@ -6,8 +6,13 @@
 
 
 
+<div class="d-flex vh-100 text-center justify-content-center align-items-center"
+  *ngIf="(weatherResult | json) == ({} | json)">
+  <h2 class="text-info">Something went wrong, try again! <a routerLink="/" class="text-danger">Go back</a></h2>
+</div>
 
-<div *ngIf="!loading && weatherResult" [@fadeInOut] class="container mt-5">
+
+<div *ngIf="!loading && (weatherResult | json) !== ({} | json)" [@fadeInOut] class="container mt-5">
   <div class="row">
     <div class="col-sm-4">
 
