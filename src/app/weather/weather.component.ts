@@ -30,13 +30,16 @@ export class WeatherComponent implements OnInit, OnDestroy {
 
   weatherResult!: Weather;
 
-  constructor(private route: ActivatedRoute, private weatherService: WeatherServiceService) { }
+  constructor(private route: ActivatedRoute,
+              private weatherService: WeatherServiceService) { }
 
   ngOnInit(): void {
     this.loading = true;
     this.city = this.route.snapshot.paramMap.get('city') || '';
     this.weatherService.getWeather(this.city)
-      .pipe(takeUntil(this.unsubscribe$))
+      .pipe(
+        takeUntil(this.unsubscribe$)
+      )
       .subscribe(res => {
         if (Object.keys(res).length === 0) {
           this.weatherResult = res;
@@ -53,6 +56,10 @@ export class WeatherComponent implements OnInit, OnDestroy {
             humidity: res.main.humidity,
             country: res.sys.country,
             name: res.name,
+            speed: res.wind.speed,
+            deg: res.wind.deg,
+            gust: res.wind.gust,
+            cloudall: res.clouds.all
           };
           this.weatherResult = weather;
         }
@@ -60,6 +67,7 @@ export class WeatherComponent implements OnInit, OnDestroy {
       });
 
   }
+
 
   ngOnDestroy(): void {
 

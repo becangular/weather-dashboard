@@ -1,20 +1,65 @@
 <div class="row mt-2">
-  <div class="col-sm-12">
+  <div class="col-sm-3">
 
-    <div class="card mb-4">
-      <div class="card-header color-head">
-        <h5>Images from web</h5>
+    <div class="card mb-3">
+      <div class="card-header color-temp-min">
+        <h5>Wind speed</h5>
       </div>
-      <div class="card-body">
-
-
-
-
-        <a routerLink="/" class="btn btn-primary">Go back</a>
+      <div class="card-body d-flex flex-column justify-content-center align-items-center">
+        <i class="bi bi-wind" style="font-size: 3rem; color: rgb(241, 188, 41)"></i>
+        <h4 class="display-6">{{weatherResult.speed | number: '1.0-0'}}sec</h4>
       </div>
     </div>
 
   </div>
 
+  <div class="col-sm-3">
+
+    <div class="card mb-3">
+      <div class="card-header color-temp-max">
+        <h5>Wind direction</h5>
+      </div>
+      <div class="card-body d-flex flex-column justify-content-center align-items-center">
+        <i class="bi bi-wind" style="font-size: 3rem; color: rgb(221, 49, 49)"></i>
+        <h4 class="display-6">{{weatherResult.deg| number: '1.0-0'}}</h4>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-3">
+
+    <div class="card mb-3">
+      <div class="card-header color-humidity">
+        <h5>Wind gust</h5>
+      </div>
+      <div class="card-body d-flex flex-column justify-content-center align-items-center">
+        <i class="bi bi-wind" style="font-size: 3rem; color: rgb(71, 125, 243)"></i>
+        <h4 class="display-6">{{weatherResult.gust | number: '1.0-0'}}sec</h4>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-3">
+
+    <div class="card mb-3">
+      <div class="card-header color-humidity">
+        <h5>Cloudiness</h5>
+      </div>
+      <div class="card-body d-flex flex-column justify-content-center align-items-center">
+        <i class="bi bi-cloud-haze" style="font-size: 3rem; color: rgb(71, 125, 243)"></i>
+        <h4 class="display-6">{{weatherResult.cloudall | number: '1.0-0'}}%</h4>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row mt-2">
+  <div class="col-sm-12">
+    <a routerLink="/" class="btn btn-primary">Go back</a>
+  </div>
 
 </div>

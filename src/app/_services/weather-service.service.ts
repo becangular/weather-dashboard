@@ -3,8 +3,6 @@ import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, delay } from 'rxjs/operators';
-import { Weather } from '../_intefaces/weather.interface';
-
 
 
 @Injectable({
@@ -14,7 +12,6 @@ export class WeatherServiceService {
 
   private apiUrlBase: string = environment.apiWeather.urlSearch;
   private apiKey: string = environment.apiWeather.key;
-
 
   constructor(private http: HttpClient) { }
 
@@ -30,5 +27,6 @@ export class WeatherServiceService {
       );
 
   }
+
 
 }

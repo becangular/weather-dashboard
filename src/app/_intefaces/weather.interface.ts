@@ -10,5 +10,8 @@ export interface Weather {
   humidity: number;
   country: string;
   name: string;
-
+  speed: number;
+  deg: number;
+  gust: number;
+  cloudall: number;
 }
